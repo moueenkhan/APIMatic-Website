@@ -1,0 +1,26 @@
+{
+  "name": "apimatic-website",
+  "version": "1.0.0",
+  "description": "Automation Testing of APIMatic Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moueenkhan/APIMatic-Website.git"
+  },
+  "keywords": [
+    "APIMatic",
+    "Website"
+  ],
+  "author": "Moueen Akhtar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moueenkhan/APIMatic-Website/issues"
+  },
+  "homepage": "https://github.com/moueenkhan/APIMatic-Website#readme",
+  "dependencies": {
+    "cypress": "^9.7.0"
+  }
+}
