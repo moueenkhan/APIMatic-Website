@@ -14,8 +14,12 @@ context("File upload", () => {
   it.only("Landing page Testing", () => {
     cy.contains("Faster API Integration", { timeout: 10000 });
 
-    // cy.get(".btn-primary")
-    // .should("have.css", "background-color", "#0C7FF2 !important")
+    cy.get(".elementor-widget-wrap>.elementor-element")
+    .should("have.css", "width", "100%")
+
+    cy.get(".img-fluid no-lazyload attachment-full size-full")
+    .should("have.css", "width", "584")
+
     cy.xpath(
       "/html/body/div[1]/div/section[1]/div[2]/div[1]/div/section/div/div/div/div/div/div/div/div[1]/a/span"
     )
