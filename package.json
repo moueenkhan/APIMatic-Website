@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/moueenkhan/APIMatic-Website#readme",
   "dependencies": {
-    "cypress": "^9.7.0"
+    "cypress": "^9.7.0",
+    "xpath": "0.0.32"
   }
 }
