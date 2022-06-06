@@ -1,7 +1,21 @@
 require("cypress-xpath");
+import { Links } from "../support/config.js";
 context("File upload", () => {
-  beforeEach(() => {
-    cy.visit("http://www.apimatic.io");
+  // beforeEach(() => {
+  //   cy.visit("https://www.apimatic.io/blog/");
+  // });
+
+
+  describe("Broken Links Testing", () => {
+    Links.forEach((url) => {
+      it.only(`Broken Links Testing for ${url}`, () => {
+        cy.visit(url)
+        cy.get("a:not([href*='linkedin'])").each((link) => {
+          cy.request(link.prop("href"));
+          cy.url().should("include", "www.apimatic.io");
+        });
+      });
+    });
   });
 
   it("Broken Links Testing", () => {
@@ -11,7 +25,7 @@ context("File upload", () => {
     });
   });
 
-  it.only("Landing page Testing", () => {
+  it("Landing page Testing", () => {
     cy.contains("Faster API Integration", { timeout: 10000 });
 
     cy.get(".elementor-widget-wrap>.elementor-element")
